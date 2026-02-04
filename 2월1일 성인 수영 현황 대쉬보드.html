@@ -478,6 +478,12 @@
     </div>
   </div>
 
+  <div class="header" style="margin-top: 24px;">
+    <p style="font-size: 11px; color: #95a5a6;">
+      2026년 2월 1일 기준 데이터 분석 결과 | 분석자: 이보형 팀장
+    </p>
+  </div>
+
   <script>
     const timeData = [
       { time:"6:00",  mwf:46, tts:46, daily:20, mwfOnly:26, ttsOnly:26, unique:72, uLong:61, uShort:11 },
@@ -655,6 +661,7 @@
             color: '#fff',
             font: { size: 10, weight: 'bold' },
             formatter: (value, ctx) => {
+              const datasetIndex = ctx.datasetIndex;
               const dataIndex = ctx.dataIndex;
               const d = timeData[dataIndex];
               const total = d.unique;
